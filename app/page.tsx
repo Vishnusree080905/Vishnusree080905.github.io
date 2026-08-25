@@ -82,7 +82,7 @@ export default function Home() {
 
       <section className="contact-section" id="contact">
         <p className="section-kicker">07 / Contact</p><h2>Let&apos;s build something useful.</h2><p>I&apos;m open to jobs, internships, entry-level roles, and conversations about technology.</p>
-        <a className="contact-email" href="mailto:vishnuss0809@gmail.com">vishnuss0809@gmail.com <span aria-hidden="true">↗</span></a>
+        <a className="contact-email" href="https://mail.google.com/mail/?view=cm&fs=1&to=vishnuss0809@gmail.com" target="_blank" rel="noopener noreferrer">vishnuss0809@gmail.com <span aria-hidden="true">↗</span></a>
         <a className="linkedin-link" href="https://www.linkedin.com/in/vishnu-sreenath/" target="_blank" rel="noreferrer">linkedin.com/in/vishnu-sreenath ↗</a>
         <div className="contact-links"><a href="https://github.com/vishnusree080905" target="_blank" rel="noreferrer">GitHub ↗</a><a href="/Vishnu-Resume.pdf" target="_blank">Résumé ↗</a><a href="#top">Back to top ↑</a></div>
       </section>
