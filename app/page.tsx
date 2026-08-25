@@ -1,14 +1,22 @@
 const skills = [
   { title: "Programming", items: ["Python", "JavaScript", "HTML & CSS"] },
-  { title: "Software", items: ["Next.js", "React", "Git & GitHub"] },
-  { title: "AI & data", items: ["Machine Learning", "Data Analysis", "Problem Solving"] },
-  { title: "Engineering", items: ["Mechatronics", "Automation", "Cloud Computing"] },
+  { title: "AI & data", items: ["Machine Learning", "TensorFlow", "Scikit-learn"] },
+  { title: "Embedded & robotics", items: ["Arduino", "ROS2", "Microcontrollers"] },
+  { title: "Tools", items: ["Git & GitHub", "VS Code"] },
 ];
 
 const projects = [
   { number: "01", title: "Personal Portfolio", summary: "A responsive portfolio website designed and built with Next.js, Tailwind CSS, and GitHub Pages.", stack: ["Next.js", "TypeScript", "Tailwind CSS"], status: "Live now" },
-  { number: "02", title: "Your AI / Python Project", summary: "Add an AI, machine-learning, automation, or data project here. Explain the problem, your solution, and its outcome.", stack: ["Python", "AI / ML", "Coming soon"], status: "Add your project" },
-  { number: "03", title: "Your Mechatronics Project", summary: "Show how you combine engineering and software—for example, an IoT dashboard, robotics system, or smart automation project.", stack: ["Mechatronics", "Software", "Coming soon"], status: "Add your project" },
+  { number: "02", title: "Autonomous Vehicle Sensor Redundancy", summary: "Developed a sensor-redundancy prototype using LiDAR, radar, and cameras with real-time sensor fusion for safer autonomous-vehicle decisions.", stack: ["LiDAR", "Radar", "Sensor fusion"], status: "Mechatronics project" },
+  { number: "03", title: "Personal Money Tracker", summary: "Built a responsive web-based money tracker with budget management, category sorting, and dynamic chart visualizations.", stack: ["HTML", "CSS", "JavaScript"], status: "Web application" },
+  { number: "04", title: "Identity Misuse Prevention", summary: "Developed an AI-based application to detect and recognize faces from images, extracting key features to improve recognition accuracy.", stack: ["Python", "Machine learning", "Computer vision"], status: "AI project" },
+];
+
+const experiences = [
+  ["Common Rocket", "Contributed to a robotic-arm project, gaining practical experience in embedded systems and robotics."],
+  ["AICTE AI Internship", "Built experience with machine learning, neural networks, TensorFlow, Scikit-learn, and Python-based model development."],
+  ["Titan Company Limited", "Learned through data analysis, process optimization, and teamwork in an industry environment."],
+  ["Dia Infra Solutions Pvt. Ltd.", "Gained exposure to conceptual design, project planning, and IT workflows."],
 ];
 
 export default function Home() {
@@ -24,11 +32,12 @@ export default function Home() {
         <div className="hero-orb hero-orb-two" aria-hidden="true" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
-          <p className="eyebrow enter-one"><span className="status-dot" /> Open to software internships</p>
-          <h1 className="enter-two">Mechatronics student.<br /><em>Software-minded</em> builder.</h1>
-          <p className="hero-copy enter-three">I&apos;m <strong>Vishnu S S</strong>—an aspiring software engineer exploring Python, AI/ML, cloud computing, and the systems that turn good ideas into useful technology.</p>
-          <div className="hero-actions enter-four"><a className="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a><a className="button button-secondary" href="#contact">Let&apos;s connect <span aria-hidden="true">↗</span></a></div>
+          <p className="eyebrow enter-one"><span className="status-dot" /> Open to internships and jobs</p>
+          <h1 className="enter-two">Mechatronics student.</h1>
+          <div className="hero-copy enter-three"><p className="intro-name">Vishnu S S,</p><p>An aspiring software engineer exploring Python, AI/ML, cloud computing, and the systems that turn good ideas into useful technology.</p></div>
+          <div className="hero-actions enter-four"><a className="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a><a className="button button-secondary" href="/Vishnu-Resume.pdf" target="_blank">VIEW RESUME <span aria-hidden="true">↗</span></a></div>
         </div>
+        <div className="portrait-frame enter-four"><img src="/vishnu-portrait.jpeg" alt="Vishnu S S" /></div>
         <aside className="hero-card enter-four" aria-label="Focus areas"><p className="card-label">Current focus</p><ul><li>Python development</li><li>AI &amp; machine learning</li><li>Cloud computing</li><li>Engineering systems</li></ul></aside>
       </section>
 
@@ -44,20 +53,38 @@ export default function Home() {
       </section>
 
       <section className="section projects-section" id="projects">
-        <div className="projects-topline"><p className="section-kicker">03 / Selected work</p><p className="project-note">Replace the two “Your project” cards as you build them.</p></div>
+        <div className="projects-topline"><p className="section-kicker">03 / Selected work</p><p className="project-note">Projects across software, AI, and mechatronics.</p></div>
         <div className="section-heading"><h2>Proof, not just potential.</h2><p>Projects are where I document what I built, how I approached it, and what I learned.</p></div>
         <div className="project-list">{projects.map((project) => <article className="project-card" key={project.number}><div className="project-number">{project.number}</div><div className="project-main"><p className="project-status">{project.status}</p><h3>{project.title}</h3><p>{project.summary}</p><div className="project-stack">{project.stack.map((item) => <span key={item}>{item}</span>)}</div></div><span className="project-arrow" aria-hidden="true">↗</span></article>)}</div>
       </section>
 
       <section className="section education-section">
         <p className="section-kicker">04 / Education</p>
-        <div className="education-card"><div><p className="card-label">Currently studying</p><h2>Mechatronics Engineering</h2><p>Add your college name, graduation year, achievements, certifications, and relevant coursework here.</p></div><span className="education-mark">ME</span></div>
+        <div className="education-card"><div><p className="card-label">2023 - 2027 · Current CGPA 8.71 (through semester 5)</p><h2>B.E. Mechatronics Engineering</h2><p>SNS College of Technology, Coimbatore.</p></div><span className="education-mark">MCT</span></div>
+      </section>
+
+      <section className="section experience-section">
+        <p className="section-kicker">05 / Experience &amp; credentials</p>
+        <div className="section-heading"><h2>Learning in the real world.</h2><p>Hands-on exposure across AI, embedded systems, robotics, design, and industry workflows.</p></div>
+        <div className="experience-grid">{experiences.map(([title, description]) => <article className="experience-card" key={title}><h3>{title}</h3><p>{description}</p></article>)}</div>
+      </section>
+
+      <section className="section certification-section">
+        <p className="section-kicker">06 / Certifications &amp; participation</p>
+        <div className="section-heading"><h2>Always learning.<br />Always showing up.</h2><p>Experiences that reflect my commitment to technical learning, collaboration, and continuous growth.</p></div>
+        <div className="certification-grid">
+          <article className="certification-card featured"><p>Certification</p><h3>Microsoft Azure AI Fundamentals</h3><strong>AI-900 certified</strong></article>
+          <article className="certification-card"><p>Event participation</p><h3>Wings of Fire</h3><span>SNS College of Technology · 18 October 2023</span></article>
+          <article className="certification-card"><p>National quiz</p><h3>ROTA QUEST</h3><span>4-day national quizzarathon · 23 - 27 January 2025</span></article>
+          <article className="certification-card"><p>Hackathon</p><h3>Kumaraswamy College of Engineering</h3><span>Participant</span></article>
+        </div>
       </section>
 
       <section className="contact-section" id="contact">
-        <p className="section-kicker">05 / Contact</p><h2>Let&apos;s build something useful.</h2><p>I&apos;m open to internships, entry-level software roles, collaborations, and conversations about technology.</p>
-        <a className="contact-email" href="mailto:your-email@example.com">your-email@example.com <span aria-hidden="true">↗</span></a>
-        <div className="contact-links"><a href="https://github.com/vishnusree080905" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div>
+        <p className="section-kicker">07 / Contact</p><h2>Let&apos;s build something useful.</h2><p>I&apos;m open to jobs, internships, entry-level roles, and conversations about technology.</p>
+        <a className="contact-email" href="mailto:vishnuss0809@gmail.com">vishnuss0809@gmail.com <span aria-hidden="true">↗</span></a>
+        <a className="linkedin-link" href="https://www.linkedin.com/in/vishnu-sreenath/" target="_blank" rel="noreferrer">linkedin.com/in/vishnu-sreenath ↗</a>
+        <div className="contact-links"><a href="https://github.com/vishnusree080905" target="_blank" rel="noreferrer">GitHub ↗</a><a href="/Vishnu-Resume.pdf" target="_blank">Résumé ↗</a><a href="#top">Back to top ↑</a></div>
       </section>
       <footer><span>© 2026 Vishnu S S</span><span>Designed &amp; built with Next.js</span></footer>
     </main>
