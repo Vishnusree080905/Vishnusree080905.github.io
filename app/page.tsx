@@ -37,7 +37,7 @@ export default function Home() {
           <div className="hero-copy enter-three"><p className="intro-name">Vishnu S S,</p><p>An aspiring software engineer exploring Python, AI/ML, cloud computing, and the systems that turn good ideas into useful technology.</p></div>
           <div className="hero-actions enter-four"><a className="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a><a className="button button-secondary" href="/Vishnu-Resume.pdf" target="_blank">VIEW RESUME <span aria-hidden="true">↗</span></a></div>
         </div>
-        <div className="portrait-frame enter-four"><img src="/vishnu-portrait.jpeg" alt="Vishnu S S" /></div>
+        
         <aside className="hero-card enter-four" aria-label="Focus areas"><p className="card-label">Current focus</p><ul><li>Python development</li><li>AI &amp; machine learning</li><li>Cloud computing</li><li>Engineering systems</li></ul></aside>
       </section>
 
